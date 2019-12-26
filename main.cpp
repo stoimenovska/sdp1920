@@ -1,9 +1,16 @@
-#include "employee.h"
-#include <cstring>
+#include "company.h"
 #include <iostream>
-using namespace std;
+#include <string>
 
+using namespace std;
 int main() {
-	//Company companyFmi = new Company();
-	return 0;
+
+	Company* compFMI = new Company;
+	compFMI->addEmployee("ivan", "ivan");
+	compFMI->addEmployee("ivan", "martin");
+	compFMI->addEmployee("ivan", "petar");
+	compFMI->addEmployee("ivan", "georgi");
+	compFMI->printHierarchy();
+
+
 }

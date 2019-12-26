@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <iostream>
 #include <cstring>
@@ -5,26 +6,25 @@
 
 using namespace std;
 class Employee {
-
 protected:
 	string name;
 	vector <Employee*> subordinates;
 	Employee* boss;
+
 public:
 	//constructor
 	Employee();
 	Employee(string);
 	void setBoss(Employee*);
 	Employee* getBoss();
-	/*Employee findSubordinate(string);
-	Employee addSubordinate(string);
+	Employee findSubordinate(string);
+	void addSubordinate(Employee*);
 	void printBossName();
-
 	void printName();
-
 	void printNameAndSubordinates();
-
 	void printHierarchy(int);
-	unsigned int getTotalSubordinates();
-	*/
+	int getTotalSubordinates();
+	Employee chooseReplacementAndAssignMyEmployeesToHim();
+	void removeSub(Employee);
+
 };

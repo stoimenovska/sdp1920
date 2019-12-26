@@ -3,18 +3,39 @@
 using namespace std;
 
 Company::Company() {
-
-	Employee();
+	owner = NULL;
 }
 void Company::addEmployee(string bossName, string employeeName) {
+	if (owner == NULL) {
+		cout << "adding owner" << endl;
+		owner = new Employee(employeeName);
+		owner->setBoss(owner);
+	}
+	else {
+		Employee boss = this->findEmployee(bossName);
 
+		if (&boss != NULL) {
+			cout << "adding to a found boss" << endl;
+			Employee* newEmployee = new Employee(employeeName);
+			boss.addSubordinate(newEmployee);
+		}
+	}
 
 }
-//Employee Company::findEmployee(string employeeName) const {
+Employee Company::findEmployee(string employeeName) {
 
+	return owner->findSubordinate(employeeName);
 
+}
+void Company::printEmplyeeNameAndDirectSubs(string employeeName) {
+	this->findEmployee(employeeName).printNameAndSubordinates();
+};
+void Company::printHierarchy()const {
+	owner->printHierarchy(0);
+};
+void Company::fire(string employeeName) {
+	Employee toFire = this->findEmployee(employeeName);
+	Employee* toFireBoss = toFire.getBoss();
 
-//}
-//void Company::printEmplyeeNameAndDirectSubs(string employeeName) {};
-//void Company::printHierarchy()const {};
-//void Company::fire(string employeeName) {};
+	toFireBoss->removeSub(toFire);
+};
