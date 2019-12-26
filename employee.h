@@ -1,15 +1,22 @@
+#include <string>
+#include <iostream>
+#include <cstring>
+#include <vector>
+
+using namespace std;
 class Employee {
 
 protected:
 	string name;
-	vector<Employee *> subordinates;
+	vector <Employee*> subordinates;
 	Employee* boss;
 public:
 	//constructor
+	Employee();
 	Employee(string);
-	void setBoss(Employee);
-	Employee getBoss()const;
-	Employee findSubordinate(string);
+	void setBoss(Employee*);
+	Employee* getBoss();
+	/*Employee findSubordinate(string);
 	Employee addSubordinate(string);
 	void printBossName();
 
@@ -19,5 +26,5 @@ public:
 
 	void printHierarchy(int);
 	unsigned int getTotalSubordinates();
-
+	*/
 };

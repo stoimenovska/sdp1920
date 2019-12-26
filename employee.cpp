@@ -1,17 +1,23 @@
 #include "employee.h"
-#include <iostram>
+#include <cstring>
+#include <iostream>
 
+using namespace std;
+Employee::Employee() {
+
+	name = nullptr;
+}
 Employee::Employee(string _name) {
 	name = _name;
-	subordinates = [];
+	//subordinates = [];
 }
-void Employee::setBoss(Employee _boss) {
+void Employee::setBoss(Employee* _boss) {
 	boss = _boss;
 }
-Employee Employee::getBoss()const {
+Employee* Employee::getBoss() {
 	return this->boss;
 }
-Employee Employee::findSubordinate(string) {}
+/*Employee Employee::findSubordinate(string) {}
 Employee Employee::addSubordinate(string) {}
 void Employee::printBossName() {}
 
@@ -22,4 +28,4 @@ void Employee::printName() {
 void Employee::printNameAndSubordinates() {}
 
 void Employee::printHierarchy(int) {}
-unsigned int Employee::getTotalSubordinates() {}
+unsigned int Employee::getTotalSubordinates() {} */
