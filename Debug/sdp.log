@@ -1,0 +1,28 @@
+﻿  company.cpp
+  employee.cpp
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\company.h(1,10): fatal error C1014: too many include files: depth = 1024
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(4,13): error C3646: 'name': unknown override specifier
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(4,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(5,8): error C2143: syntax error: missing ';' before '<'
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(5,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(5,33): error C2238: unexpected token(s) preceding ';'
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(9,18): error C2460: 'Employee::string': uses 'Employee', which is being defined
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(1): message : see declaration of 'Employee'
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(12,33): error C2061: syntax error: identifier 'string'
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(13,32): error C2061: syntax error: identifier 'string'
+  main.cpp
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.cpp(2,10): fatal error C1083: Cannot open include file: 'iostram': No such file or directory
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(4,13): error C3646: 'name': unknown override specifier
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(4,13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(5,8): error C2143: syntax error: missing ';' before '<'
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(5,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(5,33): error C2238: unexpected token(s) preceding ';'
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(9,18): error C2460: 'Employee::string': uses 'Employee', which is being defined
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(1): message : see declaration of 'Employee'
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(12,33): error C2061: syntax error: identifier 'string'
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\employee.h(13,32): error C2061: syntax error: identifier 'string'
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\main.cpp(5,2): error C2065: 'Company': undeclared identifier
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\main.cpp(5,10): error C2146: syntax error: missing ';' before identifier 'companyFmi'
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\main.cpp(5,10): error C2065: 'companyFmi': undeclared identifier
+  Generating Code...
+C:\Users\stoim\source\repos\stoimenovska\sdp1920\main.cpp(5,34): error C2061: syntax error: identifier 'Company'
