@@ -7,14 +7,11 @@
 using namespace std;
 class Employee {
 protected:
-
+	string name;
 	vector <Employee*> subordinates;
 	Employee* boss;
 
 public:
-	string name;
-	//constructor without parameters
-	//Employee();
 
 	//constructor with parameter employee name
 	Employee(string);
@@ -50,5 +47,5 @@ public:
 	Employee* chooseReplacementAndAssignMyEmployeesToHim();
 
 	//remove subordinates 
-	void removeSub(Employee*);
+	void removeSubordinate(Employee*);
 };

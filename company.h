@@ -22,6 +22,7 @@ public:
 
 	//function to fire an employee that doesn't have a subordinates
 	void fireEmployee(string);
+
 	//function to fire an employee that have a subordinates
 	void fireEmployeeWithSubs(string);
 
