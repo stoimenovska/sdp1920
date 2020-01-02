@@ -1,53 +1,46 @@
 #pragma once
-#include <string>
-#include <iostream>
+#include "employee.h"
 #include <cstring>
-#include <vector>
+#include <iostream>
 
 using namespace std;
-class Employee {
+
+class Company {
 protected:
-	string name;
-	vector <Employee*> subordinates;
-	Employee* boss;
+	//pointer to the owner of the company
+	Employee* owner;
 
 public:
-	//constructor without parameters
-	Employee();
+	//default constructor
+	Company();
 
-	//constructor with parameter employee name
-	Employee(string);
+	//function to add an employee that doesn't have a subordinates
+	void addEmployee(string, string);
 
-	//set boss to a new employee
-	void setBoss(Employee*);
+	//function to add an employee with subordinates
+	void addEmployeeWithSubs(string, string, vector<string>);
 
-	//get boss from employee
-	Employee* getBoss();
+	//function to fire an employee that doesn't have a subordinates
+	void fireEmployee(string);
+	//function to fire an employee that have a subordinates
+	void fireEmployeeWithSubs(string);
 
-	//find subordinates to an employee
-	Employee findSubordinate(string);
+	//function to promote an employee
+	void promoteEmployee(string);
 
-	//get the number of subordinates in order to need a reorganization 
-	int getTotalSubordinates();
+	//helper function to find an employee when need to print direct subs
+	Employee findEmployee(string);
 
-	//add new subordinates to a employee
-	void addSubordinate(Employee*);
+	//function to print an employee and his direct subs only
+	void printEmplyeeNameAndDirectSubs(string);
 
-	//print boss name
-	void printBossName();
+	//helper function - print hirearchy
+	void printHierarchy()const;
 
-	//print employee name
-	void printName();
+	//function to print an employee and all his subs
+	void printEmployeeNameAndAllSubs(string);
 
-	//print name and subordinates to a employee
-	void printNameAndSubordinates();
+	//function to print boss name 
+	void printEmployeeBoss(string);
 
-	//print a whole hierarchy 
-	void printHierarchy(int);
-
-	//choose witch employee will replace the old one
-	Employee chooseReplacementAndAssignMyEmployeesToHim();
-
-	//remove subordinates 
-	void removeSub(Employee);
 };
