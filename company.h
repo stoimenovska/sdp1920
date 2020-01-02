@@ -29,7 +29,7 @@ public:
 	void promoteEmployee(string);
 
 	//helper function to find an employee when need to print direct subs
-	Employee findEmployee(string);
+	Employee* findEmployee(string);
 
 	//function to print an employee and his direct subs only
 	void printEmplyeeNameAndDirectSubs(string);

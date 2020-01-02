@@ -7,13 +7,14 @@
 using namespace std;
 class Employee {
 protected:
-	string name;
+
 	vector <Employee*> subordinates;
 	Employee* boss;
 
 public:
+	string name;
 	//constructor without parameters
-	Employee();
+	//Employee();
 
 	//constructor with parameter employee name
 	Employee(string);
@@ -25,7 +26,7 @@ public:
 	Employee* getBoss();
 
 	//find subordinates to an employee
-	Employee findSubordinate(string);
+	Employee* findSubordinate(string);
 
 	//get the number of subordinates in order to need a reorganization 
 	int getTotalSubordinates();
@@ -46,8 +47,8 @@ public:
 	void printHierarchy(int);
 
 	//choose witch employee will replace the old one
-	Employee chooseReplacementAndAssignMyEmployeesToHim();
+	Employee* chooseReplacementAndAssignMyEmployeesToHim();
 
 	//remove subordinates 
-	void removeSub(Employee);
+	void removeSub(Employee*);
 };
